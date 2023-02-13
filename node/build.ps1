@@ -1,0 +1,1 @@
+node-gyp configure; node-gyp build; echo F | xcopy /Y .\build\Release\CrashpadIntegrate.node .\CrashpadIntegrate.node; rm .\build -r -force

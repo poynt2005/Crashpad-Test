@@ -1,0 +1,18 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js",
+    "build-native": "npm run build-dll && powershell -File ./build.ps1",
+    "build-dll": "cd ../ && mingw32-make.exe util && mingw32-make.exe dll && echo F | xcopy /Y .\\integrateCrashpad.dll .\\node\\integrateCrashpad.dll"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "gypfile": true,
+  "devDependencies": {
+    "node-addon-api": "^5.1.0"
+  }
+}

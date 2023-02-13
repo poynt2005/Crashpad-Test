@@ -1,0 +1,19 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "path.js",
+  "scripts": {
+    "test": "node ./test.js",
+    "install": "node-gyp rebuild",
+    "build-dll": "cd .. && mingw32-make dll && echo F|xcopy /Y .\\gui.dll .\\node\\gui.dll",
+    "build-native": "npm run build-dll && powershell -File .\\build.ps1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "gypfile": true,
+  "devDependencies": {
+    "node-addon-api": "^5.1.0"
+  }
+}
